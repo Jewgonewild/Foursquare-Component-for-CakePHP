@@ -22,6 +22,7 @@ Example controller code snippet. Make sure to take care of any errror handling.
 			$foursquare_user= $this->Foursquare->user_verifyCredentials();
 		}
 		
+		
 		//Sample output of my $foursquare_user object
 		stdClass Object
 		(
