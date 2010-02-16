@@ -18,19 +18,19 @@ var $components = array('Foursquare');
 
 /*Function that accepts POST params*/
 
-function login()
-{
-	if(!empty($this->data))
-	{	
-		$user=$this->data['User']['username'];
-		$pwd = $this->data['User']['password'];
-		$this->Foursquare->username = $user; //Make sure u use an email or phone number here 
-		$this->Foursquare->password = $password;
-		
-		//Grab user data
-		$foursquare_user= $this->Foursquare->user_verifyCredentials();
+	function login()
+	{
+		if(!empty($this->data))
+		{	
+			$user=$this->data['User']['username'];
+			$pwd = $this->data['User']['password'];
+			$this->Foursquare->username = $user; //Make sure u use an email or phone number here 
+			$this->Foursquare->password = $password;
+			
+			//Grab user data
+			$foursquare_user= $this->Foursquare->user_verifyCredentials();
+		}
 	}
-}
 
 /**
 $foursquare_user will be a user object. Here is example of my foursquare user dump:
