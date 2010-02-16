@@ -1,11 +1,11 @@
 <?php 
     App::import('Core', array('HttpSocket')); 
-	/*
-		FOURSQUARE CAKEPHP JSON Component.
-		For more information on required and optional function parameters see 
-		http://groups.google.com/group/foursquare-api/web/api-documentation
-		BY: Emmanuel P 
-	*/
+    /*
+      FOURSQUARE CAKEPHP JSON Component.
+      For more information on required and optional function parameters see 
+      http://groups.google.com/group/foursquare-api/web/api-documentation
+      BY: Emmanuel P 
+    */
     class FoursquareComponent extends Object {
 		var $username = '';
         var $password = '';
