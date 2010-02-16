@@ -4,7 +4,7 @@
 		FOURSQUARE CAKEPHP JSON Component.
 		For more information on required and optional function parameters see 
 		http://groups.google.com/group/foursquare-api/web/api-documentation
-		BY: Emmanuel P
+		BY: Emmanuel P 
 	*/
     class FoursquareComponent extends Object {
         
