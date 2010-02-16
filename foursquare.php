@@ -7,19 +7,18 @@
 		BY: Emmanuel P 
 	*/
     class FoursquareComponent extends Object {
-        
 		var $username = '';
         var $password = '';
         var $Http = null;
-       
+		
 		function __construct() {
             $this->Http =& new HttpSocket();
         }
 		/**
-		 * Returns a list of recent checkins from friends. If you pass in a geolat/geolong pair (optional, but recommended), we'll send you back a <distance> inside each <checkin> object that you can use to sort your results.
-		 * HTTP Method(s): GET
-		 * Requires Authentication: Yes
-		 */ 
+	 * Returns a list of recent checkins from friends. If you pass in a geolat/geolong pair (optional, but recommended), we'll send you back a <distance> inside each <checkin> object that you can use to sort your results.
+	 * HTTP Method(s): GET
+	 * Requires Authentication: Yes
+	 */ 
         function checkins($params) {
             $url = "http://api.foursquare.com/v1/checkins.json";
             return $this->deJSON($this->Http->get($url, $params, $this->__getAuthHeader()));                        
