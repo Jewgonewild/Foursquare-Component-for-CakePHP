@@ -17,6 +17,7 @@ Example controller code snippet. Make sure to take care of any errror handling.
 var $components = array('Foursquare');
 
 /*Function that accepts POST params*/
+
 function login()
 {
 	if(!empty($this->data))
