@@ -10,18 +10,20 @@ Example controller code snippet. Make sure to take care of any errror handling.
 		
 		var $components = array('Foursquare');
 		
-		//Some snippet in a function that checks for post data..
-		if(!empty($this->data))
-		{	
-			$user=$this->data['User']['username'];
-			$pwd = $this->data['User']['password'];
-			$this->Foursquare->username = $user; //Make sure u use an email or phone number here 
-			$this->Foursquare->password = $password;
+		//Some function that accepts post data
+		function login()
+		{
+			if(!empty($this->data))
+			{	
+				$user=$this->data['User']['username'];
+				$pwd = $this->data['User']['password'];
+				$this->Foursquare->username = $user; //Make sure u use an email or phone number here 
+				$this->Foursquare->password = $password;
 			
-			//Grab user data
-			$foursquare_user= $this->Foursquare->user_verifyCredentials();
+				//Grab user data
+				$foursquare_user= $this->Foursquare->user_verifyCredentials();
+			}
 		}
-		
 		
 		//Sample output of my $foursquare_user object
 		stdClass Object
