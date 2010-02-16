@@ -92,7 +92,7 @@
 		 * HTTP Method(s): POST
 		 * Requires Authentication: YES
 		 */
-		function venue_add($params) {
+		function venue_edit($params) {
             $url = "http://api.foursquare.com/v1/venue/proposeedit.json";
             return $this->deJSON($this->Http->post($url, $params, $this->__getAuthHeader()));                        
         }
