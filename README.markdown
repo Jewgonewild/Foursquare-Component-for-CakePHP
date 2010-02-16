@@ -8,8 +8,15 @@ Include the file in app/controllers/components
 
 Example controller code snippet. Make sure to take care of any errror handling.
 
+<?php
+
+/* Your Controller code
+...
+*/
+
 var $components = array('Foursquare');
 
+/*Function that accepts POST params*/
 function login()
 {
 	if(!empty($this->data))
@@ -22,7 +29,10 @@ function login()
 		//Grab user data
 		$foursquare_user= $this->Foursquare->user_verifyCredentials();
 	}
-/* $foursquare_user will be a user object. Here is example of my foursquare user dump:
+}
+
+/**
+$foursquare_user will be a user object. Here is example of my foursquare user dump:
 
 stdClass Object
 (
@@ -74,6 +84,5 @@ stdClass Object
 )
 */
 
-}
-
+?>
 
